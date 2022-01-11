@@ -1,20 +1,12 @@
 // *practicing the previos extra homework that i haven't done yet
 // function 2 - js
 
-/**
- * /*
- * Write a function that:
- * - takes an array of strings as input
- * - removes any spaces in the beginning or end of the strings
- * - removes any forward slashes (/) in the strings
- * - makes the string all lowercase
- *
- * @format
- *
- * ///////////////////////////////
- * this function => (tidyUpString) is for js1-3 so you don't need to solve it
- * ///////////////////////////////
- *
+ /*
+ Write a function that:
+ - takes an array of strings as input
+ - removes any spaces in the beginning or end of the strings
+ - removes any forward slashes (/) in the strings
+ - makes the string all lowercase
  */
 
 // ! i can't understand why the replaceAll() method didn't work. i have to ask it.
@@ -73,6 +65,12 @@ function formatPercentage(arr) {
 // ? The number is multiplied by 100 and then rounded and then divided by 100 to get two decimal places. 
 // ? and at the end added to '%'.
 // ? else the number is altered to '100%'
+
+
+/*----------------------------------------THe End-----------------------------------------*/
+
+
+
 
 
 // formatPercentage([23, 18.103, 187.2, 0.372]), ["23%", "18.1%", "100%", "0.37%"];
