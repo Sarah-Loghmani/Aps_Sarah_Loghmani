@@ -18,9 +18,13 @@
  */
 
 // ! i can't understand why the replaceAll() method didn't work. i have to ask it.
+
 function tidyUpString(strArr) {
     return strArr.map((str) =>str.replace("/", " ").trim().toLowerCase());
 }
+// ? I use map() in order to alter every string in the array and returns a new array that:
+// ? Every str is trimed by trim() method. Every str is altered to lower case by toLowerCase() method.
+// ? "/" in every str is repleced with ' '. 
 
 /*
  Complete the function to check if the variable `num` satisfies the following requirements:
@@ -33,17 +37,25 @@ function tidyUpString(strArr) {
 function validate(num) {
  return typeof num === "number" && num % 2 === 0 && num <= 100
 }
+//? We just want to know if the input numbers match the conditions.
+//? So we use logical (boolean) operators.
+//? Argument type must be "number", the remainder of a number divided by 2 must be 0.
+//? And the number must be less than or equal to 100 (<=)
 
 /* 
 Write a function that returns a copy of the given array arr,
 but with the element at the given index, index removed.
 The function must NOT change the original array, arr.
 */
-// ? i can't use splice() because i dont want to modify the main arr.
 function remove(arr, index) {
   arr = arr.slice(0, index).concat(arr.slice(index + 1));
   return arr;
 }
+//? I can not use splice () because I do not want to change the original arr.
+//? slice () is not destroctive method. First I get the element[0] of array to the element[index] of the array.
+//? And then return the rest of the elements after the element[index] 
+//? And I concat them.
+
 
 /*
 Write a function that:
@@ -54,14 +66,14 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  return arr.map(num=> {
-    if(num>100){
-       return "100%";
-    }else{
-      return Math.round(num*100)/100 + '%'
-    }
-  })
+  return arr.map(num=> num<100 ? Math.round(num*100)/100 + '%' : "100%");
 }
+// ? i use map() to return a new array with new specifications.
+// ? if every numbers in the array is less than 100 the map() altered the number to this order:
+// ? The number is multiplied by 100 and then rounded and then divided by 100 to get two decimal places. 
+// ? and at the end added to '%'.
+// ? else the number is altered to '100%'
+
 
 // formatPercentage([23, 18.103, 187.2, 0.372]), ["23%", "18.1%", "100%", "0.37%"];
 
