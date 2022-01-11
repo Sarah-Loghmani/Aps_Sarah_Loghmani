@@ -54,16 +54,13 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  arr[0] = arr[0] + "%";
-  arr[1] = arr[1] + "%";
-  arr[3] = arr[3] + "%";
-  
-  if (  arr[2] > 100 ) {
-    arr[2]="100";
-    arr[2] = arr[2] + "%";
-  }
-
-  return arr;
+  return arr.map(num=> {
+    if(num>100){
+       return "100%";
+    }else{
+      return Math.round(num*100)/100 + '%'
+    }
+  })
 }
 
 // formatPercentage([23, 18.103, 187.2, 0.372]), ["23%", "18.1%", "100%", "0.37%"];
