@@ -65,7 +65,6 @@ PasswordValidationResult=  [false, false, false, false, true]
 function validatePasswords(passwords) {
 
   passwords.map(password =>{
-    let restArr = 
     if(password.length>=5 &&
        containsUppercaseLetter(password) &&
        containsUppercaseLetter(password) &&
@@ -79,9 +78,10 @@ function validatePasswords(passwords) {
         }
   })
 }  
-const  double = (arr, num)=>!arr.includes(num)
+const  double = (arr, str)=>!arr.includes(num)
 for(let i = 0 ; i < password.length ; i++){
-    password
+    let str = password[i];
+    let arr = password.filter(el=> el!== el[i])
 }
 
 
