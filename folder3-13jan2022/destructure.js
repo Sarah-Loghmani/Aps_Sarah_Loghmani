@@ -32,47 +32,59 @@
 
 // براساس این تمرین آخرین مسئله از تکلیف آخر را بررسی میکنم
 
-function validatePasswords(passwords) {
-  for (let i = 0; i < passwords.length; i++) {
-    let str = passwords[i];
-    let arr = passwords.filter((el) => el !== el[i]);
-    !arr.includes(str) ? true : false;
-  }
-  passwords.map((password) => {
-    if (
-      password.length >= 5 &&
-      containsUppercaseLetter(password) &&
-      containsUppercaseLetter(password) &&
-      containsNumber(password) &&
-      containsSymbol(password)
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  });
-}
+// function validatePasswords(passwords) {
+//   for (let i = 0; i < passwords.length; i++) {
+//     let str = passwords[i];
+//     let arr = passwords.filter((el) => el !== el[i]);
+//     !arr.includes(str) ? true : false;
+//   }
+//   passwords.map((password) => {
+//     if (
+//       password.length >= 5 &&
+//       containsUppercaseLetter(password) &&
+//       containsUppercaseLetter(password) &&
+//       containsNumber(password) &&
+//       containsSymbol(password)
+//     ) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   });
+// }
 
 
-// Returns true if string contains at least one uppercase letter.
-function containsUppercaseLetter(string) {
-  return /[A-Z]/.test(string);
-}
+// // Returns true if string contains at least one uppercase letter.
+// function containsUppercaseLetter(string) {
+//   return /[A-Z]/.test(string);
+// }
 
-// Returns true if string contains at least one lowercase letter.
-function containsLowercaseLetter(string) {
-  return /[a-z]/.test(string);
-}
+// // Returns true if string contains at least one lowercase letter.
+// function containsLowercaseLetter(string) {
+//   return /[a-z]/.test(string);
+// }
 
-// Returns true if string contains at least one number.
-function containsNumber(string) {
-  return /[0-9]/.test(string);
-}
+// // Returns true if string contains at least one number.
+// function containsNumber(string) {
+//   return /[0-9]/.test(string);
+// }
 
-// Returns true if string contains at least one symbol.
-function containsSymbol(string) {
-  return /[!#$%.*&]/.test(string);
-}
-// باز هم نتونستم جواب رو بیایم بعدا بهش رجوع می کنم
+// // Returns true if string contains at least one symbol.
+// function containsSymbol(string) {
+//   return /[!#$%.*&]/.test(string);
+// }
+// // باز هم نتونستم جواب رو بیایم بعدا بهش رجوع می کنم
 // **************************************************************//*
 
+// this
+function test(){
+  console.log(this);
+}
+test()//window
+function test1(){
+  function test2(){
+    console.log(this)
+  }
+  test2()
+}
+test1()//window
