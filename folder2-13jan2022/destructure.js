@@ -13,3 +13,19 @@ console.log(arr3);
 
 const [elOne, elTwo, elThree, elFour, elFive, ...jasem] = arr
 console.log(elOne, elTwo, elThree, elFour, elFive, jasem);
+
+
+// onject destructure
+const obj1 = {
+    Name: 'sara',
+    familly: 'loghmani',
+    myRole: 'web developer'
+}
+const obj2= {
+    age:33,
+    gneder: 'female'
+}
+const obj3 = {...obj1, ...obj2};
+const {Name, age} = obj3;
+console.log(obj3);
+console.log(Name, age);
