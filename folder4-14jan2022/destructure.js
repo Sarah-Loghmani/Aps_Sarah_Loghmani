@@ -23,16 +23,36 @@ function splitTheBill(x) {
 // Crash Override
 function aliasGen(f, s) {
   // Code Here
-  //   let test = '0123456789'
-  //   let arrF = f.split('')
-  //   console.log(arrF)
-  //   let arrS = f.split('')
-  //   console.log(arrS)
-  if ("0123456789".indexOf(f[0]) !== -1 || "0123456789".indexOf(s[0]) !== -1) {
+ 
+  if (parseInt(f[0]) || parseInt(s[0]) ){
     return "Your name must start with a letter from A - Z.";
   } else {
     f = f[0].toUpperCase();
     s = s[0].toUpperCase();
     return `${firstName[f]} ${surname[s]}`;
   }
+  // ****************************************************************
+  // Regular Ball Super Ball
+// var Ball = function(ballType) {
+//   // your code goes here
+//   if(!ballType){
+//     this.ballType = 'regular'
+//   }else{
+//   this.ballType = ballType
+//   }
+// };
+// *****************************************************************
+// Disemvowel Trolls
+function disemvowel(str) {
+  let regExp= /[ieaou]/ig
+  return str.replace(regExp, '');
 }
+// second solution
+function disemvowel(str) {
+let arr=str.split('');
+//   console.log(arr)
+  let str1= '';
+   arr.filter(x=> !'ieaouIEAUO'.includes(x)).forEach(e=> str1+=e)
+  return str1
+}
+// ******************************************************************
