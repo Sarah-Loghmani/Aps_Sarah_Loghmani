@@ -1,5 +1,5 @@
 //  We'll create a function match which takes a candidate and a job, which will return a boolean indicating whether the job is a valid match for the candidate.also include 10% wiggle room (deducted from the candidate's minimum salary)
-function match(candidate, job) {
+// function match(candidate, job) {
   // is this job a valid match for the candidate?
   if (job.maxSalary && candidate.minSalary) {
     let salary = candidate.minSalary - (candidate.minSalary * 10) / 100;
@@ -7,7 +7,7 @@ function match(candidate, job) {
   } else {
     throw "ERROR";
   }
-}
+
 // ******************************************************************
 // Split The Bill
 function splitTheBill(x) {
@@ -19,6 +19,7 @@ function splitTheBill(x) {
   }
   return x;
 }
+
 // ******************************************************************
 // Crash Override
 function aliasGen(f, s) {
@@ -31,16 +32,18 @@ function aliasGen(f, s) {
     s = s[0].toUpperCase();
     return `${firstName[f]} ${surname[s]}`;
   }
+
   // ****************************************************************
   // Regular Ball Super Ball
-// var Ball = function(ballType) {
-//   // your code goes here
-//   if(!ballType){
-//     this.ballType = 'regular'
-//   }else{
-//   this.ballType = ballType
-//   }
-// };
+var Ball = function(ballType) {
+  // your code goes here
+  if(!ballType){
+    this.ballType = 'regular'
+  }else{
+  this.ballType = ballType
+  }
+};
+
 // *****************************************************************
 // Disemvowel Trolls
 function disemvowel(str) {
@@ -50,23 +53,19 @@ function disemvowel(str) {
 // second solution
 function disemvowel(str) {
 let arr=str.split('');
-//   console.log(arr)
   let str1= '';
    arr.filter(x=> !'ieaouIEAUO'.includes(x)).forEach(e=> str1+=e)
   return str1
 }
-// ******************************************************************
 
+// ******************************************************************
+// Multiples of 3 or 5
 function solution(number) {
     let sum = 0;
-    if(number<0){
-  return 0;    
-    }else{
+    if(number<0){return 0;}
     for(let i=3;i<number;i++){
-        if(i%3===0 || i%5===0){
-            sum+=i;
-        }   
-    }
-  }
+        if(i%3===0 || i%5===0){sum+=i;}
+      }
   return sum;
 }
+solution(10);
