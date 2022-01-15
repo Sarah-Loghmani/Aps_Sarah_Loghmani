@@ -23,5 +23,8 @@ console.log(obj1);
     object
 */
 // !"everything in JavaScript is NOT an object"
-
+// sub-type of object:
+/*
+    function (callable objects)
+    array
 
