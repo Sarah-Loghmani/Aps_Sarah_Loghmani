@@ -28,3 +28,24 @@ console.log(obj1);
     function (callable objects)
     array
 
+
+//*function:
+/Declaration
+/*function name(parameter){
+
+}
+name(argument)   //invoke or execute
+*/
+
+// Expression
+/*let a = function(){
+
+}
+*/
+// arrow
+/*let a = ()=>{
+
+}
+let a = ()=> ;
+*/
+// £ => alt+0163
