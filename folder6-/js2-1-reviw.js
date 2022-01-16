@@ -48,3 +48,21 @@ function funcName(){
 }
 // execute / invoke
 funcName()
+// nested function
+function funcName2() {
+  console.log(this); //window
+}
+funcName2();
+// ? method -> object
+// method  =  a function in an object
+const obj = {
+    firstName : 'sara',
+    lastName : 'loghmani',
+    fullName(){
+        console.log(this);//object
+        return `${this.firstName} ${this.lastName}`; 
+    },
+    greeting : function(){
+        
+    }
+}
