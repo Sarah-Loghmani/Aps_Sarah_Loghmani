@@ -53,16 +53,33 @@ function funcName2() {
   console.log(this); //window
 }
 funcName2();
+// arrow function
+const funcName3 = ()=> console.log(this);
+funcName3()
+
 // ? method -> object
 // method  =  a function in an object
-const obj = {
+const test = {
     firstName : 'sara',
     lastName : 'loghmani',
+    age : 33,
     fullName(){
-        console.log(this);//object
-        return `${this.firstName} ${this.lastName}`; 
+        console.log(this);//object(local scope)
+        return `${this.firstName.toUpperCase()} ${this.lastName.toUpperCase()}`; 
     },
     greeting : function(){
+        console.log(this);//object(local scope)
+        return `'Hello dear ${this.fullName()}`
+    },
+    birthDay : ()=>{
+        console.log(this);//window(global scope)
+        // return `'your birthyear is ${1400 - this.age}`// undefined
+        return `'your birthyear is ${1400 - test.age}`;
+    },
+    func1(){
         
     }
 }
+console.log(test.fullName());
+console.log(test.greeting());
+console.log(test.birthDay());
