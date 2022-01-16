@@ -1,4 +1,4 @@
-// for(variable in obj) {}
+// *for(variable in obj) {}
 const obj = {
     a:1,
     b:2,
@@ -9,7 +9,7 @@ for(let key in obj){
     console.log(`${key.toLocaleUpperCase()} : ${obj[key]}`);
 }
 // -----------------------------------------------------------------------
-// object.keys(obj)
+// *object.keys(obj)
 
 const students = {
     sarah: 19,
@@ -18,6 +18,7 @@ const students = {
     ABASS: 20,
     FERESHTE: 19,
 }
+
 let arr = Object.keys(students).map((ele) => ele.toUpperCase());
 console.log(arr);//[ 'SARAH', 'ASLAN', 'JAN', 'ABASS', 'FERESHTE' ]
 for (let key in students){
@@ -29,10 +30,12 @@ for (let key in students){
     FERESHTE;
   */
 }
-
+// ---------------------------------------------
+// *Object.values(obj)
 const flowers ={ 
     rose:'red', 
     lili:'purple', 
     liliium:'White'
 }
 console.log(Object.keys(flowers));
+console.log(Object.values(flowers));
