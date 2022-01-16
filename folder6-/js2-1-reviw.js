@@ -39,3 +39,12 @@ const flowers ={
 }
 console.log(Object.keys(flowers));
 console.log(Object.values(flowers));
+// -------------------------------------------
+// *this
+// ?functions -> window
+// decalaration function
+function funcName(){
+    console.log(this);//window
+}
+// execute / invoke
+funcName()
