@@ -77,3 +77,12 @@ obj.shopping()
 
 obj.favorites = ['clothes', 'plants', 'food']
 console.log(obj.favorites);
+
+
+
+// ---------------------
+let myFunc = function(a,b,c){
+return a+b+c;
+}
+let number = [1,2,3]
+console.log(myFunc(...number));
