@@ -1,4 +1,4 @@
-// *block 
+// *block scope
 // function x() {
 //   let num = 6;
 // }
@@ -53,4 +53,5 @@
 // console.log(number);
 // -----------------------------------------------
 
-// 
+// *objects
+
