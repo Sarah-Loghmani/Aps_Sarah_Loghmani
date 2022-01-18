@@ -55,17 +55,25 @@
 
 // *objects
 
-let myAge = myFriendAge;
+let myAge = 'myFriendAge';
 let myName = 'sara'
 
 const obj ={
 
     myName,
     [myAge] : 33,
+    buy : ['kala1', 'kala2'],
 
     myBirthYear (age){
-        console.log(1400 - age);
+        console.log(`dear ${myName} your birthyear is ${1400 - age}`);
     },
-    myBirthYear([myAge])
-    
+    cards : [],
+    shopping (){
+        console.log(this.buy);
+    }
 }
+obj.myBirthYear(obj[myAge])
+obj.shopping()
+
+obj.favorites = ['clothes', 'plants', 'food']
+console.log(obj.favorites);
