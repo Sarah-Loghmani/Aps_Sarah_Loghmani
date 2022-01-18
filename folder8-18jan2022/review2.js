@@ -119,6 +119,17 @@ console.log(first , second , restOfArrayFirst);
 const [name, ...numbers] = ['sara' , 1,2,3,4 ]
 console.log(name, numbers);
 
+const profile = {
+    fisrtName : 'Sara',
+    lastName : 'Loghmani',
+    age : 33,
+    gender : 'female'
+}
+const {firstName, ...restOfProfile}= profile
+console.log(restOfProfile);
+
+
+// ----------------------------
 
 let myFunc = function(a,b,c){
 return a+b+c;
