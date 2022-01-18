@@ -62,6 +62,10 @@ const obj ={
 
     myName,
     [myAge] : 33,
+    gender : 'female',
+    1399 : 'first',
+    1400 : 'last',
+    friend : ['mahdie', 'sama', 'derang'],
     buy : ['kala1', 'kala2'],
 
     myBirthYear (age){
@@ -77,12 +81,47 @@ obj.shopping()
 
 obj.favorites = ['clothes', 'plants', 'food']
 console.log(obj.favorites);
+console.log(obj['favorites'])
+console.log(obj['myName']);
+console.log(obj[myAge]);
+console.log(obj[1399]);
+console.log(obj['1399']);
+// console.log(obj.1399);//NEMISHE
 
 
+const {gender , friend , favorites}= obj
+console.log(gender, friend, favorites);
 
+// ------------------------------
+//$  object destructure
+const circle = {
+    radiuce : 5,
+    name : 'myCircle',
+    decimal : 5
+}
+// circle.decimal = 2
+// console.log(circle);
+
+const circleArea = ({radiuce ,decimal}) => {
+    return (Math.PI*radiuce * radiuce).toFixed(decimal)
+}
+console.log(circleArea(circle));
 // ---------------------
+//$ array destructuring
+//$ rest operator
+
+const [one, two, three] =[1, 2, 3]
+console.log(one, two , three);
+
+const arrayFirst = [1, 2, 3, 4, 5]
+const [ first , second , ...restOfArrayFirst] = arrayFirst
+console.log(first , second , restOfArrayFirst);
+const [name, ...numbers] = ['sara' , 1,2,3,4 ]
+console.log(name, numbers);
+
+
 let myFunc = function(a,b,c){
 return a+b+c;
 }
 let number = [1,2,3]
-console.log(myFunc(...number));
+// console.log(myFunc(...number));
