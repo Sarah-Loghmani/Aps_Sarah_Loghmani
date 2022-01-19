@@ -33,13 +33,26 @@ const squareDigits= (num)=>{
 console.log(squareDigits(3212));
 // --------------------------------------------------
 
-// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+const statements = {
+  1: ["It is certain", "positive"],
+  2: ["It is decidedly so", "positive"],
+  5: ["You may rely on it", "positive"],
+  6: ["As I see it, yes", "positive"],
+  7: ["Most likely", "positive"],
+  8: ["Outlook good", "positive"],
+  9: ["Reply hazy, try again", "natural"],
+  10: ["Ask again later", "natural"],
+  11: ["Better not tell you now", "natural"],
+  12: ["Cannot predict now", "natural"],
+  13: ["Don't count on it", "negative"],
+  14: ["My reply is no", "negative"],
+  15: ["My sources say no", "negative"],
+  16: ["Outlook not so good", "negative"],
+};
 
-// Examples
-// highAndLow("1 2 3 4 5");  // return "5 1"
-// highAndLow("1 2 -3 4 5"); // return "5 -3"
-// highAndLow("1 9 3 4 -5"); // return "9 -5"
-// Notes
-// All numbers are valid Int32, no need to validate them.
-// There will always be at least one number in the input string.
-// Output string must be two numbers separated by a single space, and highest number is first.
+let random = Math.floor(Math.random() * 16 + 1);
+for (let key in statements) {
+  if (Number(key) == random) {
+    console.log(`${statements[key][0]}, ${statements[key][1]}`);
+  }
+}
