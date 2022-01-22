@@ -20,6 +20,7 @@ const findOdd = (arr) => {
       if (arr[i] === arr[j]) {
         count++
         obj[arr[i]] = count
+        
         console.log(obj);
       }
     }
