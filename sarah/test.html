@@ -83,6 +83,15 @@ for(var i = 0; i<avatarEls.length ; i++){
     // In newer browsers, you can use the classList functionality instead:
     mainEl.classList.add("warning");//does'nt work anywhere
 
+    // Modifying inner HTML / text
+    // To completely replace the contents of an element with an arbitrary string of HTML:
+    mainEl.innerHTML = "cats are the <strong>cutest</strong>";
+    // If you don't need to pass in HTML tags:
+    mainEl.textContent = "cats are the cutest";
+
+    // Creating elements from scratch
+    var imgEl = document.createElement("img");
+
 
         </script>
     </body>
