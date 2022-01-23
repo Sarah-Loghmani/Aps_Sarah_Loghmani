@@ -66,9 +66,6 @@ for(var i = 0; i<avatarEls.length ; i++){
   document.querySelector(cssSelector) //=> returns single element 
   document.querySelectorAll(cssSelector) //=> returns a NodeList, which also actslike an array.("static")
 
-//   add a new class name to the class attribute  \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
-    avatarEls[i].className += " second-class"; // it's supported in all the browsers.
-    // nameEls[i].classList.add("second-class");//does'nt wprk anywhere
 
     // Modifying attributes & styles\/\/\/\/\/\/\/\/\/\/\/\/\/
     imgEl.src = "http://www.dogs.com/dog.gif";//or
@@ -80,7 +77,12 @@ for(var i = 0; i<avatarEls.length ; i++){
 
     // Modifying class names
     // To add a class to an element, you can set the className property:
-    
+    mainEl.className = "warning";//That will override any existing classes,
+    //  so you should do this instead if you just want to add to the list of classes:
+    mainEl.className += " warning";// it's supported in all the browsers.
+    // In newer browsers, you can use the classList functionality instead:
+    mainEl.classList.add("warning");//does'nt work anywhere
+
 
         </script>
     </body>
