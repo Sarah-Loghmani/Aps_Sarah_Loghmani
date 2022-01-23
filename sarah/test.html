@@ -69,6 +69,19 @@ for(var i = 0; i<avatarEls.length ; i++){
 //   add a new class name to the class attribute  \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
     avatarEls[i].className += " second-class"; // it's supported in all the browsers.
     // nameEls[i].classList.add("second-class");//does'nt wprk anywhere
+
+    // Modifying attributes & styles\/\/\/\/\/\/\/\/\/\/\/\/\/
+    imgEl.src = "http://www.dogs.com/dog.gif";//or
+    imgEl.setAttribute("src", "http://www.dogs.com/dog.gif");
+
+    headingEl.style.color = "hotpink";
+    //remove attributes
+    imgEl.removeAttribute("disabled");
+
+    // Modifying class names
+    // To add a class to an element, you can set the className property:
+    
+
         </script>
     </body>
 </html>
