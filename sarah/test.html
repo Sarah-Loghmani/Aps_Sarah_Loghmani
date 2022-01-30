@@ -102,14 +102,39 @@ for(var i = 0; i<avatarEls.length ; i++){
 
 
     // some DOM event types:
+
     // mouse events (MouseEvent): are triggered on the majority of browsers and devices. // ***mousedown, mouseup, click, dblclick, mousemove, mouseover, mousewheel, mouseout, contextmenu
+
     // touch events (TouchEvent):are only triggered on touch-enabled devices //***touchstart, touchmove, touchend, touchcancel
+
     // keyboard events (KeyboardEvent): //***keydown, keypress, keyup
+
     // form events: //***focus, blur, change, submit
+    
     // window events: //***scroll, resize, hashchange, load, unload
 
 
+    // Adding event listeners:To make sure that the browser calls a particular function when an event happens on an element
+    
+    // If you want information about the event that happened, you can look at the event object that the browser passes to your callback function:
+    var faceEl = document.getElementById("face");
+    var onFaceClick = function(e) {
+        console.log("You clicked " + e.clientX + " , " + e.clientY);
+    };
+    faceEl.addEventListener("click", onFaceClick);
 
-        </script>
+    // If you are overriding click behavior on a link or submit behavior on a form, you may want to call:
+     event.preventDefault()// to prevent the browser's default behavior.
+
+    //  Removing event listeners
+    // If you no longer need a particular event listener, you can remove it using removeEventListener:
+    var faceEl = document.getElementById("face");
+    var onFaceClick = function(e) {
+        console.log("You clicked " + e.clientX + " , " + e.clientY);
+    };
+    faceEl.addEventListener("click", onFaceClick);
+    // later...
+    faceEl.removeEventListener("click", onFaceClick);//****************
+            </script>
     </body>
 </html>
