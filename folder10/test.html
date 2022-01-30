@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Avatar attributes</title>
+
+       
+    </head>
+    <body>
+    
+    <h1>Which avatar is which?</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Attributes</th>
+                <th>Avatar</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <ul>
+                    <li>pink</li>
+                    <li>innocent</li>
+                </ul>
+            </td>
+            <td>
+                <img class='first-class' src="https://www.kasandbox.org/programming-images/avatars/marcimus.png" id="avatar-1" alt="Marcimus, A pink, innocent avatar">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>green</li>
+                    <li>ANGRY</li>
+                </ul>
+            </td>
+            <td>
+                <img class='first-class' src="https://www.kasandbox.org/programming-images/avatars/old-spice-man.png" id="avatar-2" alt="Old Spice Mann, A green, angry avatar">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>orange</li>
+                    <li>multi-legged</li>
+                </ul>
+            </td>
+            <td>
+                <img class='first-class' src="https://www.kasandbox.org/programming-images/avatars/orange-juice-squid.png" id="avatar-3" alt="Orange Juice Squid, An orange, multi-legged avatar">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    
+                <script>
+var avatarEls = document.getElementsByTagName("img");
+for(var i = 0; i<avatarEls.length ; i++){
+    avatarEls[i].height = 50;
+}
+
+  document.getElementById(id) //=> returns single element 
+  document.getElementsByClassName(className) //=> return an HTMLCollection objectthat acts like an array("live") 
+  document.getElementsByTagName(tagName) //=> return an HTMLCollection object that acts like an array("live") 
+  document.querySelector(cssSelector) //=> returns single element 
+  document.querySelectorAll(cssSelector) //=> returns a NodeList, which also actslike an array.("static")
+
+
+    // Modifying attributes & styles\/\/\/\/\/\/\/\/\/\/\/\/\/
+    imgEl.src = "http://www.dogs.com/dog.gif";//or
+    imgEl.setAttribute("src", "http://www.dogs.com/dog.gif");
+
+    headingEl.style.color = "hotpink";
+    //remove attributes
+    imgEl.removeAttribute("disabled");
+
+    // Modifying class names
+    // To add a class to an element, you can set the className property:
+    mainEl.className = "warning";//That will override any existing classes,
+    //  so you should do this instead if you just want to add to the list of classes:
+    mainEl.className += " warning";// it's supported in all the browsers.
+    // In newer browsers, you can use the classList functionality instead:
+    mainEl.classList.add("warning");//does'nt work anywhere
+
+    // Modifying inner HTML / text
+    // To completely replace the contents of an element with an arbitrary string of HTML:
+    mainEl.innerHTML = "cats are the <strong>cutest</strong>";
+    // If you don't need to pass in HTML tags:
+    mainEl.textContent = "cats are the cutest";
+
+    // Creating elements from scratch
+    var imgEl = document.createElement("img");
+    // To append it to the page, call appendChild on the target parent element:
+    document.body.appendChild(imgEl);
+    divEl.appendChild(divEl2)
+    // Similarly, you can also use :
+    // insertBefore, 
+    // replaceChild, 
+    // removeChild, and 
+    // insertAdjacentHTML.
+
+
+    // some DOM event types:
+
+    // mouse events (MouseEvent): are triggered on the majority of browsers and devices. // ***mousedown, mouseup, click, dblclick, mousemove, mouseover, mousewheel, mouseout, contextmenu
+
+    // touch events (TouchEvent):are only triggered on touch-enabled devices //***touchstart, touchmove, touchend, touchcancel
+
+    // keyboard events (KeyboardEvent): //***keydown, keypress, keyup
+
+    // form events: //***focus, blur, change, submit
+    
+    // window events: //***scroll, resize, hashchange, load, unload
+
+
+    // Adding event listeners:To make sure that the browser calls a particular function when an event happens on an element
+    
+    // If you want information about the event that happened, you can look at the event object that the browser passes to your callback function:
+    var faceEl = document.getElementById("face");
+    var onFaceClick = function(e) {
+        console.log("You clicked " + e.clientX + " , " + e.clientY);
+    };
+    faceEl.addEventListener("click", onFaceClick);
+
+    // If you are overriding click behavior on a link or submit behavior on a form, you may want to call:
+     event.preventDefault()// to prevent the browser's default behavior.
+
+    //  Removing event listeners
+    // If you no longer need a particular event listener, you can remove it using removeEventListener:
+    var faceEl = document.getElementById("face");
+    var onFaceClick = function(e) {
+        console.log("You clicked " + e.clientX + " , " + e.clientY);
+    };
+    faceEl.addEventListener("click", onFaceClick);
+    // later...
+    faceEl.removeEventListener("click", onFaceClick);//****************
+            </script>
+    </body>
+</html>
