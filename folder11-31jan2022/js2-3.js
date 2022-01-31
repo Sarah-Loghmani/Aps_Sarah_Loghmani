@@ -26,3 +26,16 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) =>(mpg*fuelLeft)>=distanceToPum
 
 // console.log(zeroFuel(50, 25, 2));  //true;
 // console.log(zeroFuel(100, 50, 1));  //false
+
+// ***************************************************************************
+
+// Take an array and remove every second element from the array.
+//  Always keep the first element and start removing with the next element.
+
+const removeEveryOther = (arr)=> arr.filter((ele , index)=> 
+index % 2 === 0 )
+
+console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));  //['Hello', 'Hello Again']);
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));      //[1, 3, 5, 7, 9]);
+console.log(removeEveryOther([[1, 2]]));                             // [[1, 2]]);
+console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]));      //[['Goodbye']]);
