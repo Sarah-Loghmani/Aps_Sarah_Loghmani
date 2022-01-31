@@ -9,10 +9,7 @@ const testEven = (n)=> n % 1 === 0 ? n % 2 === 0 : false
 // console.log(testEven(0)) //true, "testEven for 0"
 // console.log(testEven(0.5)) //false, "testEven for 0.5"
 // console.log(testEven(1)) //false, "testEven for 1"
-// console.log(testEven(2)) //true, "testEven for 2"
-// console.log(testEven(-4))  //true, "testEven for 2"
-
-//******************************* ************************************************
+//*****************************************************************************
 
 // You were camping with your friends far away from home,
 //  but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! 
@@ -26,7 +23,6 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) =>(mpg*fuelLeft)>=distanceToPum
 
 // console.log(zeroFuel(50, 25, 2));  //true;
 // console.log(zeroFuel(100, 50, 1));  //false
-
 // ***************************************************************************
 
 // Take an array and remove every second element from the array.
@@ -39,3 +35,23 @@ console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));  //['Hello',
 console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));      //[1, 3, 5, 7, 9]);
 console.log(removeEveryOther([[1, 2]]));                             // [[1, 2]]);
 console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]));      //[['Goodbye']]);
+// **************************************************************************
+
+// Summation
+// Write a program that finds the summation of every number from 1 to num.
+//  The number will always be a positive integer greater than 0.
+
+const summation = (num)=> {
+    let arr = []
+   for(let i = 0 ; i <= num ; i++){
+     arr.push(i)
+    }
+    return arr.reduce( (num1, num2)=> num1+num2 )
+}
+console.log(summation(1));  //1;
+console.log(summation(8));  //36;
+// ****************************************************************************
+
+// At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.
+
+// You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].
