@@ -31,10 +31,10 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) =>(mpg*fuelLeft)>=distanceToPum
 const removeEveryOther = (arr)=> arr.filter((ele , index)=> 
 index % 2 === 0 )
 
-console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));  //['Hello', 'Hello Again']);
-console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));      //[1, 3, 5, 7, 9]);
-console.log(removeEveryOther([[1, 2]]));                             // [[1, 2]]);
-console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]));      //[['Goodbye']]);
+// console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));  //['Hello', 'Hello Again']);
+// console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));      //[1, 3, 5, 7, 9]);
+// console.log(removeEveryOther([[1, 2]]));                             // [[1, 2]]);
+// console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]));      //[['Goodbye']]);
 // **************************************************************************
 
 // Summation
@@ -48,10 +48,35 @@ const summation = (num)=> {
     }
     return arr.reduce( (num1, num2)=> num1+num2 )
 }
-console.log(summation(1));  //1;
-console.log(summation(8));  //36;
+// console.log(summation(1));  //1;
+// console.log(summation(8));  //36;
 // ****************************************************************************
 
-// At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.
+// You will be given an array of all the family members' ages, in any order. 
+//The ages will be given in whole numbers,
+// so a baby of 5 months, will have an ascribed ‘age’ of 0.
+// Return a new array (a tuple in Python) with
+// [youngest age, oldest age, difference between the youngest and oldest age].
 
-// You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].
+const differenceInAges= (arr)=>{
+  let result=[];
+  let youngestAge;
+  let oldestAge;
+
+  for(let i = 0 ; i > arr.length ; i++){
+
+    for(let j = 0 ; j > arr.length ; j++){
+
+      if(arr[i] <= arr[j]){
+        youngestAge = arr[i];
+      }else{
+        youngestAge = arr[j]
+      }
+    }
+  }
+  result.push(youngestAge, oldestAge, youngestAge - oldestAge);
+  return result;
+}
+                             [82, 15, 6, 38, 35];
+console.log(differenceInAges([82, 15, 6, 38, 35])); // [6, 82, 76]
+console.log(differenceInAges([57, 99, 14, 32])); // [14, 99, 85]
