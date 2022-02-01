@@ -60,23 +60,12 @@ const summation = (num)=> {
 
 const differenceInAges= (arr)=>{
   let result=[];
-  let youngestAge;
-  let oldestAge;
+  let youngestAge = Math.min(...arr);
+  let oldestAge = Math.max(...arr);
 
-  for(let i = 0 ; i > arr.length ; i++){
-
-    for(let j = 0 ; j > arr.length ; j++){
-
-      if(arr[i] <= arr[j]){
-        youngestAge = arr[i];
-      }else{
-        youngestAge = arr[j]
-      }
-    }
-  }
-  result.push(youngestAge, oldestAge, youngestAge - oldestAge);
+  result.push(youngestAge, oldestAge,  oldestAge - youngestAge);
   return result;
 }
-                             [82, 15, 6, 38, 35];
+                         
 console.log(differenceInAges([82, 15, 6, 38, 35])); // [6, 82, 76]
 console.log(differenceInAges([57, 99, 14, 32])); // [14, 99, 85]
