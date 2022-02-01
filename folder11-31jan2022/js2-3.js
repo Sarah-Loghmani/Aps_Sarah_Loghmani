@@ -82,3 +82,16 @@ function gooseFilter (birds) {
 
 console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));//["Mallard", "Hook Bill", "Crested", "Blue Swedish"]);
 console.log(gooseFilter(["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"])); //[];
+// ***************************************************************************
+
+// Create a class Ball. 
+// Ball objects should accept one argument for "ball type" when instantiated.
+// If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+
+var Ball = function (ballType) {
+  // your code goes here
+  return !ballType ? (this.ballType = "regular") : (this.ballType = ballType);
+};
+
+console.log( Ball());
+console.log(Ball("super")); 
