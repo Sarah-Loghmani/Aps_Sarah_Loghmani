@@ -67,5 +67,18 @@ const differenceInAges= (arr)=>{
   return result;
 }
                          
-console.log(differenceInAges([82, 15, 6, 38, 35])); // [6, 82, 76]
-console.log(differenceInAges([57, 99, 14, 32])); // [14, 99, 85]
+// console.log(differenceInAges([82, 15, 6, 38, 35])); // [6, 82, 76]
+// console.log(differenceInAges([57, 99, 14, 32])); // [14, 99, 85]
+// *************************************************************
+
+// Write a function, gooseFilter , 
+// that takes an array of strings as an argument 
+// and returns a filtered array containing the same elements but with the 'geese' removed.
+
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(bird => !geese.includes(bird))
+};
+
+console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));//["Mallard", "Hook Bill", "Crested", "Blue Swedish"]);
+console.log(gooseFilter(["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"])); //[];
