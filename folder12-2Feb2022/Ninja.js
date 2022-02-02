@@ -2,13 +2,13 @@
 let pEl = document.querySelectorAll("p");
 console.log(pEl);
 
-for(let p of pEl){
+pEl.forEach(p =>{
     if(p.textContent.includes("error")){
         p.classList.add("error")
     }else if(p.textContent.includes("success")){
         p.classList.toggle("success")
     }
-}
+})
 
 let spanClass = document.querySelector(".span");
 // console.log(spanClass.innerText);// only visible text
