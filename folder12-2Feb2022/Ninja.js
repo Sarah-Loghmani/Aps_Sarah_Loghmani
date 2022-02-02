@@ -81,7 +81,7 @@ li.addEventListener("click", e => {
 
 button.addEventListener("click", ()=>{
 
-    // ulEl.innerHTML += `<li><p>new list</p></li>`;//this is appended from end by default. and don't follow from event that is added to its sibling elements.
+    // ulEl.innerHTML += `<li><p>new list</p></li>`;//this is appended from end by default. and don't let to run the event that is added to its sibling elements.
     // or
     let p = document.createElement("p");
     let li = document.createElement("li");
