@@ -55,6 +55,8 @@ console.log(spanClass.parentElement.parentElement);
 console.log(spanClass.nextElementSibling);
 console.log(spanClass.previousElementSibling);//null => there is not any previous element
 
+
+
 // * events
 let button=document.createElement("button");
 button.innerText = "Click me";
@@ -64,16 +66,18 @@ button.addEventListener("click", () =>{
 //   console.log("you click on me");
   // console.log(e);
 
-  ulEl.innerHTML += `<li><p>new list</p></li>`;//this is appended from end by default.
+//   ulEl.innerHTML += `<li><p>new list</p></li>`;//this is appended from end by default.
   // or
-//   let p = document.createElement("p");
-//   let li = document.createElement("li");
-//   p.textContent = "new list2";
-//   li.append(p);
-//   ulEl.append(li);
-  // To adding the element from first of parrent:
-  // ulEl.prepend(li);
+  let p = document.createElement("p");
+  let li = document.createElement("li");
+  p.textContent = "new list2";
+  li.append(p);
+  ulEl.append(li);
+//   To adding the element from first of parrent:
+//   ulEl.prepend(li);
 });
+
+
 
 // console.log((ulEl.children));
 
@@ -85,11 +89,11 @@ li.addEventListener("click", e => {
   // console.log(p);// not best
 
   e.target.style.textDecoration = "line-through";
+  e.stopPropagation()
 
   // *remove elements
   li.remove()//not best practice
   e.target.remove()//best practice
-  e.stopPropagation()
 })
 })
 
