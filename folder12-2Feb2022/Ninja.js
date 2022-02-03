@@ -51,6 +51,7 @@ Array.from(article.children).forEach(child => {
 // * To understand the parentElement of an element:
 console.log(spanClass.parentElement);
 console.log(spanClass.parentElement.parentElement);
+
 console.log(spanClass.nextElementSibling);
 console.log(spanClass.previousElementSibling);//null => there is not any previous element
 
@@ -60,35 +61,57 @@ button.innerText = "Click me";
 article.append(button);
 
 button.addEventListener("click", () =>{
-    console.log("you click on me");
-    // console.log(e);
+//   console.log("you click on me");
+  // console.log(e);
+
+  ulEl.innerHTML += `<li><p>new list</p></li>`;//this is appended from end by default.
+  // or
+//   let p = document.createElement("p");
+//   let li = document.createElement("li");
+//   p.textContent = "new list2";
+//   li.append(p);
+//   ulEl.append(li);
+  // To adding the element from first of parrent:
+  // ulEl.prepend(li);
 });
 
 // console.log((ulEl.children));
+
+// cause liEl is not defind in global scope i can't use it so:
 (Array.from(ulEl.children)).forEach(li => {
 li.addEventListener("click", e => {
   // console.log(e);
-  console.log(e.target); //best practice
+//   console.log(e.target); //best practice
   // console.log(p);// not best
 
   e.target.style.textDecoration = "line-through";
 
   // *remove elements
-  e.target.remove()
+  li.remove()//not best practice
+  e.target.remove()//best practice
+  e.stopPropagation()
 })
 })
 
+//* event bubbling
+ulEl.addEventListener("click", e => {
+    console.log("ulEl event");
+    e.target.remove();
+    if(e.target.tagName === "LI"){
+        e.terget.remove();
+    }
+} )
 
-button.addEventListener("click", ()=>{
+// button.addEventListener("click", ()=>{
 
-    // ulEl.innerHTML += `<li><p>new list</p></li>`;//this is appended from end by default. and don't let to run the event that is added to its sibling elements.
-    // or
-    let p = document.createElement("p");
-    let li = document.createElement("li");
-    p.textContent = "new list2"
-    li.append(p)
-    ulEl.append(li);
-    // To adding the element from first of parrent:
-    // ulEl.prepend(li);
-})
+//     // ulEl.innerHTML += `<li><p>new list</p></li>`;//this is appended from end by default. and don't let to run the event that is added to its sibling elements.
+//     // or
+//     let p = document.createElement("p");
+//     let li = document.createElement("li");
+//     p.textContent = "new list2"
+//     li.append(p)
+//     ulEl.append(li);
+//     // To adding the element from first of parrent:
+//     // ulEl.prepend(li);
+// })
 
