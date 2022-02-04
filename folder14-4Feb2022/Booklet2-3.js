@@ -50,15 +50,98 @@ const randomColor = ()=>{
 
 const onClickRandomColor = ()=>{
 
-    const newColor = randomColor()
-    reportColor.textContent = newColor
-
-    document.body.style.backgroundColor = newColor;
+    reportColor.textContent = randomColor()
+    document.body.style.backgroundColor = randomColor();
 }
 
 const colorBtn = document.querySelector(".random-color");
 
 colorBtn.addEventListener("click", onClickRandomColor)
+
+
+// *DOM-this
+for(let i=0 ; i<21 ; i++){
+
+    const buttons = document.createElement("button");
+
+    buttons.innerText = "CLICK";
+    document.body.append(buttons);
+
+    buttons.style.height = "100px";
+    buttons.style.width = "100px";
+    buttons.style.margin = "20px";
+
+    buttons.addEventListener("click", function(){
+
+        console.log(this);//have to write decleration function to refers to the button.
+        this.style.background = randomColor();
+        this.style.color = randomColor();
+    });
+};
+
+const colorize = function(){
+    this.style.backgroundColor = randomColor();
+    this.style.color = randomColor();
+}
+
+for(let i=0 ; i<11 ; i++){
+
+    const h1El = document.createElement("h1");
+    h1El.innerText = "Click me";
+    document.body.append(h1El);
+
+    h1El.addEventListener("click", colorize);
+};
+
+// *keyup
+const input = document.createElement("input");
+input.type = "text";
+input.placeholder = "push a key";
+
+document.body.append(input);
+input.style.margin = "20px 100px";
+
+input.addEventListener("keyup", e =>{
+    // console.log(e);
+})
+
+// *keydown
+input.addEventListener("keydown", e =>{
+    console.log(e.code);
+})
+
+const div = document.createElement("div");
+document.body.append(div);
+div.style.backgroundColor = "red";
+div.style.width = '200px';
+div.style.height = "200px";
+div.style.position = "absolute";
+let divTop = div.style.top = "1600px";
+let divDown = div.style.left = "50px";
+
+input.addEventListener("keydown", e =>{
+    switch(e.code) {
+      case "ArrowDown":
+        div.style.top = `${divTop++}px`;
+        break;
+      case "ArrowUp":
+        div.style.top = `${divTop++}px`;
+        break;
+      case "ArrowLeft":
+        div.style.top = `${divTop++}px`;
+        break;
+      case "ArrowRight":
+        div.style.top = `${divTop++}px`;
+        break;
+    };
+});
+
+
+
+
+
+
+
 
 
 
