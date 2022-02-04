@@ -3,10 +3,10 @@ const firstBtn = document.querySelector(".firstButton");
 //* onclick
 // firstBtn.addEventListener("click", ()=>alert("this is js event 2") )
 
-firstBtn.onclick = function(){
-    alert("this is js event")
-    console.log(firstBtn);
-};// this version override the html version;
+// firstBtn.onclick = function(){
+//     alert("this is js event")
+//     console.log(firstBtn);
+// };// this version override the html version;
 // and first this version fires and then the "addEventListener" fires.
 
 
@@ -96,7 +96,7 @@ for(let i=0 ; i<11 ; i++){
 // *keyup
 const input = document.createElement("input");
 input.type = "text";
-input.placeholder = "push a key";
+input.placeholder = "push an Arrow to move the red box";
 
 document.body.append(input);
 input.style.margin = "20px 100px";
@@ -116,8 +116,8 @@ div.style.backgroundColor = "red";
 div.style.width = '200px';
 div.style.height = "200px";
 div.style.position = "absolute";
-let divTop = div.style.top = "1600px";
-let divDown = div.style.left = "50px";
+let divTop = div.style.top = 1600;
+let divLeft = div.style.left = 50;
 
 input.addEventListener("keydown", e =>{
     switch(e.code) {
@@ -125,13 +125,13 @@ input.addEventListener("keydown", e =>{
         div.style.top = `${divTop++}px`;
         break;
       case "ArrowUp":
-        div.style.top = `${divTop++}px`;
+        div.style.top = `${divTop--}px`;
         break;
       case "ArrowLeft":
-        div.style.top = `${divTop++}px`;
+        div.style.left = `${divLeft--}px`;
         break;
       case "ArrowRight":
-        div.style.top = `${divTop++}px`;
+        div.style.left = `${divLeft++}px`;
         break;
     };
 });
