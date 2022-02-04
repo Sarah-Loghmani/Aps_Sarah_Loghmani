@@ -7,11 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booklet js 2-3</title>
 
+    <style>
+        .display{
+            background-color: burlywood;
+            width: 150px;
+            margin-left: 100px;
+            height: 30px;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
 
-    <script src=""></script>    
+    <h1>Let's practice js 2-3 from Booklet</h1>
+
+    <button class="firstButton" onclick="let userName = prompt('hello whats is your name'); alert(`Do not click me anymore ${userName}`)">Html events</button>
+
+    <p>Resize the browser window to fire the <code>resize</code> code</p>
+
+    <p class="display" >Window height:<span id="hieght"></span></p>
+    
+    <p class="display" >Window width:<span id="width"></span></p>
+ 
+
+    <script src="./Booklet2-3.js">
+
+    </script>    
 
 </body>
 </html>
