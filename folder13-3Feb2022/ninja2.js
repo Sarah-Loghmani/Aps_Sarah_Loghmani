@@ -24,5 +24,5 @@ const popup = document.querySelector(".popup");
 
 button.addEventListener("click", ()=>{
     console.log("hii");
-    popup.style.display ="block";
+    popup.style.display = "block";
 })
