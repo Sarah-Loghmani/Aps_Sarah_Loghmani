@@ -16,11 +16,11 @@ form.addEventListener("submit", e =>{
     // ! Default behavior !
     e.preventDefault()
 
-    console.log(e);
-    console.dir(form);
+    // console.log(e);
+    // console.dir(form);
     // console.log(form.elements.username.value);//or
-    console.log(e.target.username.value);//better way
-    console.log(e.target.tweet.value);
+    // console.log(e.target.username.value);//better way
+    // console.log(e.target.tweet.value);
 
     console.log("submitted");
     // --------------------------------------
