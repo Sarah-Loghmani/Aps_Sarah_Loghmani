@@ -44,5 +44,33 @@ form.addEventListener("submit", e =>{
 
 
 // * shopping list:
+const shoppingForm = document.querySelector("#shoppingForm");
+const list = document.querySelector("#list");
 
+// const shoppingList = (product, quantity) => {
+//     let liEl = document.createElement("li");
+//     liEl.append(`${product}: ${quantity}`)
+//     list.append(liEl);
+// };
 
+shoppingForm.addEventListener("submit", e => {
+    e.preventDefault();
+
+    let productInput = e.target.product.value;
+    let quantityInput = e.target.quantity.value;
+
+    // if(!productInput || !quantityInput){
+    //     return alert("please fill the blanck.");
+    // }else{
+    //     alert("submitted");
+    // };
+
+    let liEl = document.createElement("li");
+    liEl.append(`${productInput}: ${quantityInput}`);
+    list.append(liEl);
+
+    // shoppingList(productInput, quantityInput);
+
+    productInput.value = "";
+    quantityInput.value = "";
+})
