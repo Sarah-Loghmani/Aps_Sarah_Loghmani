@@ -68,3 +68,14 @@ shoppingForm.addEventListener("submit", e => {
   e.target.product.value = "";
   e.target.quantity.value = "";
 });
+
+
+// * change
+const changeInput = document.querySelector("#change");
+const title = document.querySelector("#title");
+
+changeInput.addEventListener("input", e => {
+    // console.log(e);
+    title.textContent = `Welcome ${changeInput.value}`;
+});
+
