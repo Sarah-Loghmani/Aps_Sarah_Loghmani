@@ -42,3 +42,7 @@ form.addEventListener("submit", e =>{
     e.target.tweet.value = "";
 });
 
+
+// * shopping list:
+
+
