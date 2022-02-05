@@ -48,31 +48,23 @@ form.addEventListener("submit", e =>{
 const shoppingForm = document.querySelector("#shoppingForm");
 const list = document.querySelector("#list");
 
-const shoppingList = (product, quantity) => {
-    let liEl = document.createElement("li");
-    liEl.append(`${product}: ${quantity}`)
-    list.append(liEl);
-};
-
 shoppingForm.addEventListener("submit", e => {
   e.preventDefault();
 
   console.log(e);
-  let productInput = e.target.producte.value;
+  let productInput = e.target.product.value;
   let quantityInput = e.target.quantity.value;
 
-  // if(!productInput || !quantityInput){
-  //     return alert("please fill the blanck.");
-  // }else{
-  //     alert("submitted");
-  // };
+  if(!productInput || !quantityInput){
+      return alert("please fill the blanck.");
+  }else{
+      alert("submitted");
+  };
 
-//   let liEl = document.createElement("li");
-//   liEl.textContent = `${productInput.value}: ${quantityInput.value}`;
-//   list.append(liEl);
+  let liEl = document.createElement("li");
+  liEl.textContent = `${productInput}: ${quantityInput}`;
+  list.append(liEl);
 
-  shoppingList(productInput, quantityInput);
-
-  e.target.producte.value = "";
-  e.target.producte.value = "";
+  e.target.product.value = "";
+  e.target.quantity.value = "";
 });
