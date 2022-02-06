@@ -26,4 +26,48 @@ colorBtn.addEventListener("click", e=>{
 
 colorBtn.addEventListener("click", e =>{
     colorBtn.textContent = "You change me"
+});
+
+// *event delegation:
+
+let lis = document.querySelectorAll("li");
+lis.forEach(li => {
+    li.addEventListener("click", ()=>{
+        li.remove()
+    })
+    
+});
+
+const tweetForm = document.querySelector("#tweetForm");
+const tweetList = document.querySelector(".tweetsList");
+
+tweetForm.addEventListener("submit", e =>{
+    e.preventDefault()
+
+    let usernameInput = e.target.userName;
+    let tweetInput = e.target.tweet;
+
+    if(!usernameInput || !tweetInput){
+    
+        alert("please fill the blanks")
+        return;
+    };
+
+    const liEl = document.createElement("li");
+    const bEl =document.createElement("b");
+
+    bEl.textContent = usernameInput.value;
+    liEl.append(bEl, `: ${tweetInput.value}`);
+    tweetList.prepend(liEl);
+
+    usernameInput.value = "";
+    tweetInput.value = "";
+});
+
+tweetList.addEventListener("click", e =>{
+    console.log(e.target);
+    e.target.nodeName === "LI" && e.target.remove()
 })
+
+
+// *callBack function
