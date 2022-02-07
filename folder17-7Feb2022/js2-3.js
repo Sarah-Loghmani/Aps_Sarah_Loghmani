@@ -34,22 +34,22 @@ document.body.style.transition = "2s background-color";
 // colorChange("aqua", 6000);
 
 // ? first way
-// const colorChange = (color, delay, doNext)=>{
+const colorChange = (color, delay, doNext)=>{
 
-//     setTimeout(()=>{
+    setTimeout(()=>{
 
-//         document.body.style.backgroundColor = color;
-//         doNext && doNext();
-//     },delay);
-// };
+        document.body.style.backgroundColor = color;
+        doNext && doNext();
+    },delay);
+};
 
-// colorChange('red', 2000, ()=>{
+colorChange('red', 2000, ()=>{
 
-//     colorChange('khaki',2000, ()=>{
+    colorChange('khaki',2000, ()=>{
 
-//         colorChange('aqua', 2000);
-//     });
-// });
+        colorChange('aqua', 2000);
+    });
+});
 
 // *promise
 
