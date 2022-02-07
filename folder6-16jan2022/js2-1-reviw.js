@@ -40,6 +40,8 @@ const flowers ={
 console.log(Object.keys(flowers));
 console.log(Object.values(flowers));
 // -------------------------------------------
+
+
 // *this
 // ?functions -> window
 // decalaration function
@@ -67,6 +69,7 @@ const test = {
   firstName: "sara",
   lastName: "loghmani",
   age: 33,
+
 // decalaration function
   fullName() {
     console.log(this); //object(local scope)
@@ -87,6 +90,7 @@ const test = {
         nested();
         return "<3";
     },
+
     //   arrow function nested in decalaration function
       func2() {
         console.log(this); //object
@@ -103,6 +107,7 @@ const test = {
         // return `'your birthyear is ${1400 - this.age}`// undefined
         return `'your birthyear is ${1400 - test.age}`;
       },
+
 //  decalaration function nested in arrow function
     arrow: ()=>{
         console.log(this);//window
@@ -111,6 +116,7 @@ const test = {
         }
         nested()
     },
+
     // arrow func nested in arrow
     arrow2: ()=>{
         console.log(this);//window
@@ -120,6 +126,7 @@ const test = {
         nested()
     }
 };
+
 console.log(test.fullName());
 console.log(test.greeting());
 console.log(test.func1());
