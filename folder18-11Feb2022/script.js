@@ -7,7 +7,8 @@ const getTodos = (callBack) => {
     if (this.readyState === 4 && this.status === 200) {
     //   console.log(request, request.readyState);
     //   console.log(this.responseText);
-    callBack(this.responseText, undefined)
+    const data = JSON.parse(this.responseText)
+    callBack(data, undefined)
     } else if (this.readyState === 4) {
     //   console.log("could not fetch the data");
     callBack(undefined, "could not fetch the data");
@@ -33,3 +34,4 @@ getTodos((data, err)=>{
     }
 
 });
+  
