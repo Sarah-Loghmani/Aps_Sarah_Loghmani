@@ -57,10 +57,35 @@ getAutors("json/bill.json", (data, err)=>{
         console.log(data);
         getAutors("json/smith.json", (data, err)=>{
             console.log(data);
-        })
-    })
+        });
+    });
+});
+
+//* promise
+
+const getAutors2 = (resource) => {
+    return new promise((resolve, reject) => {
+        const request2 = new XMLHttpRequest();
+      
+        request2.addEventListener("readystatechange", () => {
+          if (request2.readyState === 4 && request2.status === 200) {
+            const data = JSON.parse(request2.responseText);
+            resolve(data)
+          } else if (request2.readyState === 4) {
+            reject("error getting resource")
+          }
+        });
+
+        request2.open("GET", resource);
+        request2.send();
+    });
+
+};
+
+getAutors2("json/bill.json").then(data=>{
+    console.log("promise resolved", data);
+}).catch(err=>{
+    console.log("promise reject", err);
 })
-
-
 
   
