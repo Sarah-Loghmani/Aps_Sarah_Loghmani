@@ -178,7 +178,7 @@ const object = {
     }
 };
 // console.log(object.fullName());
-// console.log(object.greeting());
+console.log(object.greeting());
 // console.log(object.func1());
 // object.func2();
 // console.log(object.func3());
