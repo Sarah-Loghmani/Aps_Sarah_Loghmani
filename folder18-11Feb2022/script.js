@@ -32,6 +32,35 @@ getTodos((data, err)=>{
     }else{
         console.log(data);
     }
-
 });
+
+//* Hell callBack function
+
+const getAutors = (resource, callback)=>{
+    const request2 = new XMLHttpRequest();
+
+    request2.addEventListener("readystatechange", ()=>{
+        if(request2.readyState === 4 && request2.status === 200){
+            const data = JSON.parse(request2.responseText)
+            callback(data, undefined)
+        }else if(request2.readyState === 4){
+            callback(undefined, "could not fetch data");
+        }
+    })
+    request2.open("GET", resource);
+    request2.send();
+};
+
+getAutors("json/bill.json", (data, err)=>{
+    console.log(data);
+    getAutors("json/john.json", (data, err)=>{
+        console.log(data);
+        getAutors("json/smith.json", (data, err)=>{
+            console.log(data);
+        })
+    })
+})
+
+
+
   
