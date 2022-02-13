@@ -137,16 +137,71 @@
 //        }
 //  };
 
+// const getAuthors5 = async () => {
+//   try {
+//     const res = await fetch("json/bill.json");
+//     if(res.status !== 200){
+//       throw new Error("fake error")
+//     }
+//     const data = await res.json();
+//     console.log('resolved', data);
+//   } catch (error) {
+//     console.log('rejected', error);
+//   }
+// };
+// getAuthors5();
+
+// *axios
+// https://axios-http.com/
+// axios
+// .get('json/bill.json')
+// .then( res => {
+//   console.log('resolved', res);
+// })
+// .catch(error => {
+//   console.log('rejected', error);
+// });
+// 
+
+// axios
+//   .get("https://jsonplaceholder.typicode.com/todos")
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+const getDadJoke = async () => {
+  try {
+    /*
+    const config = { headers: { Accept: "application/json" } };
+    const res = await axios.get("https://icanhazdadjoke.com/" , config);
+    */
+    const res = await axios.get("https://icanhazdadjoke.com/", {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    console.log(res.data);
+    return res.data.joke;
+  } catch (error) {
+    console.log("no jokes available , sorry");
+  }
+};
+
+console.log(getDadJoke());
 const getAuthors5 = async () => {
   try {
-    const res = await fetch("json/bil.json");
-    if(res.status !== 200){
-      throw new Error("fake error")
-    }
+    const res = await fetch("https://icanhazdadjoke.com/", {
+      headers: {
+        Accept: "application/json",
+      },
+    });
     const data = await res.json();
-    console.log('resolved', data);
+    console.log("resolved", data);
   } catch (error) {
-    console.log('rejected', error);
+    console.log("rejected", error);
   }
 };
 getAuthors5();
