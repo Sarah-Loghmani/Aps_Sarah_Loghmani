@@ -25,17 +25,15 @@ function User(name, email, password){
     this.name = name;
     this.email = email;
     this.password = password;
-    this.login=function(){
-
-        console.log(this.name + " Logged in");
-        return this;// for chaining methods
-    };
-    this.logout = function(){
-         
-         console.log(this.name + " Logged out");
-         return this;//for chaining methods
-    };
 }
+User.prototype.login = function () {
+  console.log(this.name + " Logged in");
+  return this; // for chaining methods
+};
+User.prototype.logout = function () {
+  console.log(this.name + " Logged out");
+  return this; //for chaining methods
+};
 const user1 = new User('Sarah Loghmani', 'sara@mail.com','123456');
 const user2 = new User("Shokat Etemadi", "shokat@mail.com", "123456");
 console.log(user1, user2);
