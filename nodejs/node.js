@@ -19,13 +19,14 @@ module.exports.name = "SARAH";
 
 // ?  File System
 //?--------------
-//* fs node is an great object than when we require we call it:
+//* fs node is an big object that when we require we call it:
 const fs = require('fs');
 
-//* there are a lot of  method in it that let interact with files of system.
+//* there are a lot of method in it that let interact with files of system.
 
 // console.log(fs);
 
-fs.mkdir
+fs.mkdir('sarah', )
+fs.mkdir('sara', { recursive: true })
 
 
