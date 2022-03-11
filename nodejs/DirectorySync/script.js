@@ -1,0 +1,1 @@
+let str="I am a created file by fs node method"
