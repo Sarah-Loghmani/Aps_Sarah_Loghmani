@@ -31,9 +31,17 @@ const directoryName = {
 };
 
 //* Create A Directory In NodeJS (Async)
-fs.mkdir(`${directoryName.async}`, { recursive: true }, (err) => {
+fs.mkdir(directoryName.async, { recursive: true }, (err) => {
   if (err) throw err;
 });
 //* Create A Directory In NodeJS (Sync)
+fs.mkdirSync(directoryName.sync, { recursive: true });
+//* creat files in directory
+fs.writeFileSync(`${directoryName.sync}/index.html`, "!");
 
-fs.mkdirSync(`${directoryName.sync}`, { recursive: true });
+fs.writeFileSync(
+  `${directoryName.sync}/script.js`,
+  'let str="I am a created file by fs node method"'
+);
+
+fs.writeFileSync(`${directoryName.async}/style.css`, "*{margin:0}");
