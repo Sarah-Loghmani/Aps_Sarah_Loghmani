@@ -4,3 +4,16 @@
 //? https://yarnpkg.com/
 
 
+
+//*first of all before installing of any npm packages must install package.json file by this commend:
+//* npm init -y
+
+//* then in the terminal we write this commend: 
+//* npm i/install {package name}
+//* this commend create:
+//**** node-modules file & 
+//**** package-lock.json => just check out the node module versions & 
+//**** add dependencies property to package.json 
+
+
+
