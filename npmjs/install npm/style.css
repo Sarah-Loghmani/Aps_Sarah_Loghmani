@@ -1,0 +1,15 @@
+.jokeContainer{
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background-color: rgb(247, 247, 239);
+}
+.btn-warning{
+    border-radius: 0 !important;
+    box-shadow: 0 0 10px rgb(165, 151, 151);
+}
