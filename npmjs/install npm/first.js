@@ -1,3 +1,5 @@
+
+
 //* first of all i direct the terminal to this local file
 //* then write "npm init -y" commend in the terminal
 //* the package.json is created
@@ -8,17 +10,23 @@
 
 //TODO => to show in terminal
 
-const joke = require("give-me-a-joke");
-const colors = require("colors");
-joke.getRandomDadJoke((joke) => console.log(joke.america));
+// const joke = require("give-me-a-joke");
+// const colors = require("colors");
+// joke.getRandomDadJoke((joke) => console.log(joke.america));
 
 
 //TODO => let's make a app
 
-const joke = document.querySelector(".joke");
-const btn = document.querySelector(".btn");
-
+const jokeEl = document.querySelector(".joke");
+const btn = document.querySelector("button");
+// add event listener
 btn.addEventListener("click", () =>{
-    axios
-    .get()
+    axios.get("https://icanhazdadjoke.com/", {
+        headers: {
+          Accept: "application/json"
+        },
+      })
+      .then(res=>{
+          jokeEl.innerHTML = res.data.joke
+      });
 })
