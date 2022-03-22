@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shopping.css">
+</head>
+<body class="basket">
+    <header>
+        <h1>Sports Clothing</h1>
+        <div class="basket-icon"><img src="./basket.png" alt=""></div>
+    </header>
+    <ul class="products">
+        <li>
+            <img src="./t-1.jpg" alt="">
+            <h2>Green T-shirt</h2>
+            <button>Add to basket</button>
+        </li>
+        <li>
+            <img src="./t-2.jpg" alt="">
+            <h2>Yellow T-shirt</h2>
+            <button>Add to basket</button>
+        </li>
+        <li>
+            <img src="./t-3.jpg" alt="">
+            <h2>pink T-shirt</h2>
+            <button>Add to basket</button>
+        </li>
+        <li>
+            <img src="./t-1.jpg" alt="">
+            <h2>Green T-shirt</h2>
+            <button>Add to basket</button>
+        </li>
+        <li>
+            <img src="./t-2.jpg" alt="">
+            <h2>Yellow T-shirt</h2>
+            <button>Add to basket</button>
+        </li>
+        <li>
+            <img src="./t-3.jpg" alt="">
+            <h2>pink T-shirt</h2>
+            <button>Add to basket</button>
+        </li>
+    </ul>
+    
+    <script>
+        $('button').on('click', function(){
+            $(this).closest('li')
+            .find("img")
+            .clone()
+            .addClass('zoom')
+            .appendTo('body');
+            setTimeout(function(){
+                $('.zoom').remove()
+            },1000);
+        })
+    </script>
+</body>
+</html>
