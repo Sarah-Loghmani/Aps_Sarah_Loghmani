@@ -1,0 +1,37 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+  margin: 0;
+}
+
+.wrapper {
+  box-sizing: border-box;
+
+  width: 100%;
+ 
+}
+
+img {
+  /* transform: translate(-200px, 100px); */
+  /* transform:scale(1.5); /*in both x & y direction; */
+  /* transform:rotateZ(45deg); */
+
+  /* transform: rotateZ(-90deg) translateY(150px) scale(1.2); */
+}
+
+.circle {
+  background-color: pink;
+  color: white;
+  width: 100px;
+  padding:50px 0;
+  margin:60px auto;
+  border-radius: 50px;
+  line-height: 0;
+  cursor: pointer;
+  transition:background 1s, transform 1s 1s linear;
+}
+.circle:hover{
+    background:rgb(221, 177, 96);
+    transform:rotate(360deg)
+}
+
