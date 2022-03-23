@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing: border-box; */
+   font-family: 'Lato', sans-serif;
+   
+}
+body{
+     background: url(../img//images.jfif);
+     background-size:cover;
+     /* background-repeat: no-repeat; */
+}
+div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) skewY(-5deg);
+   
+}
+h1::before{
+    content:"";
+    width:100%;
+    height:4px;
+    background:#fff;
+    box-shadow: 0 0 10px #1eff4e,0 0 30px #1eff4e;
+    position: absolute;
+    bottom:80px;
+    left:0;
+    z-index: -1;
+}
+h1::after{
+    content:"";
+    width:100%;
+    height:4px;
+    background:#fff;
+    box-shadow: 0 0 10px #1eff4e,0 0 30px #1eff4e;
+    position: absolute;
+    bottom:130px;
+    left:0;
+    z-index: -1;
+}
+h1{
+    padding:20px 50px;
+    font-size:10em;
+    border:4px solid #fff;
+    color:#fff;
+    border-radius:11px;
+    box-shadow: 0 0 10px #1eff4e,0 0 30px #1eff4e,inset 0 0 10px #1eff4e,inset 0 0 30px #1eff4e;
+    text-shadow:  0 0 10px #1eff4e,0 0 20px #1eff4e, 0 0 80px #1eff4e,0 0 120px #1eff4e;
+    animation: light .1s linear infinite;
+}
+h1 span{
+    animation:light .5s linear infinite;
+}
+h1 span:nth-child(1){
+    animation-delay: 0.5s;
+}
+h1 span:nth-child(2){
+    animation-delay: 0.30s;
+}
+h1 span:nth-child(3){
+    animation-delay: 0.10s;
+}
+h1 span:nth-child(4){
+    animation-delay: 0.50s;
+}
+@keyframes light {
+    0%{opacity: 1;}
+    30%{opacity: 1;}
+    40%{opacity: .5;}
+    50%{opacity: 1;}
+    100%{opacity:1;}
+}
