@@ -31,6 +31,7 @@
             </li>
         </ul>
         <a href="#" class="reisterBtn">Register Now</a>
+        <img src="../DARK MODE/dark theme icon/moon.png" id="icon">
         <i class="fas fa-bars"></i>
     </nav>
 
@@ -214,6 +215,20 @@
     iconBar.addEventListener('click', ()=>{
         navBar.classList.toggle('hideMenu');
     });
+
+
+    // -----------------dark mood---------------
+
+    let icon =document.getElementById('icon');
+
+    icon.onclick = function() {
+        document.body.classList.toggle('darkMood');
+        if(document.body.classList.contains('darkMood')){
+            icon.src = "../DARK MODE/dark theme icon/sun.png"
+        }else{
+            icon.src = "../DARK MODE/dark theme icon/moon.png"
+        }
+    }
 </script>
 </body>
 <footer class="container">
