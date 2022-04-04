@@ -44,7 +44,7 @@ nav{
 .container{
     padding:0 7%
 }
-.container h1{
+.header h1{
     text-align:center;
     padding-top:25%;
     line-height: 0;
@@ -270,7 +270,7 @@ nav .fa-bars {
     display: none;
 }
 /* -------------for smaller screens------------- */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 960px){
 
     .logo{
         position:fixed;
@@ -369,6 +369,185 @@ nav .fa-bars {
 }
 .stories div p{
     font-size:15px;
+}
+
+}
+
+
+/* --------------------listing page----------- */
+.navBarWhite{
+    background-color:white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+.navBarWhite .navLinks li a{
+    color:#000;
+}
+.navBarWhite .reisterBtn{
+    background-color:#ff5361;
+    color:#fff;
+}
+.navBarWhite .fa-bars{
+    color:#000;
+}
+.navBarWhite .active::after{
+    background-color:#ff5361;
+}
+
+
+.containerList{
+    margin-top:50px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.leftCol{
+    flex-basis:70%;
+}
+.rightCol{
+    flex: 25%;
+}
+.leftCol h1{
+    color:#333;
+    font-weight: 600;
+    margin-bottom:30px;
+}
+.house{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+}
+.housePhoto{
+    flex-basis:40%;
+
+}
+.houseInfo{
+    flex-basis: 58%;
+    color: #555;
+}
+.housePhoto img{
+    width: 100%;
+    border-radius:12px;
+}
+.houseInfo h3{
+    font-weight: 600;
+    color:#333;
+    font-size:22px;
+    margin:4px 0;
+
+}
+.houseInfo i{
+    color:#ff5361;
+    font-size: 18px;
+    margin:10px 1px;
+}
+.housePrice{
+    text-align: right;
+}
+.housePrice h4{
+    font-size: 20px;
+}
+.housePrice h4 span{
+    font-size: 16px;
+    font-weight:500;
+}
+.sideBar{
+    border:1px solid #999;
+    padding:20px 30px;
+    margin-top:30px;
+    margin-left: 50px;
+
+}
+.sideBar h2{
+    font-weight: 500;
+}
+.sideBar h3{
+    font-weight: 500;
+    margin:20px 0 10px;
+}
+.filter{
+    display:flex;
+    align-items:center;
+    color:#555;
+    margin-bottom: 10px;
+}
+.filter p{
+    flex: 1;
+}
+.filter input{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.sidebarLink{
+    text-align: right;
+    margin:20px 0;
+}
+.sidebarLink a{
+    text-decoration: none;
+    color:#ff5361;
+}
+.pagination{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+
+}
+.pagination img{
+    width: 16px;
+    margin: 10px 20px;
+
+}
+.rightArrow{
+    transform: rotate(180deg);
+}
+.pagination span{
+    margin:10px 8px;
+    width:40px;
+    height:40px;
+    text-align: center;
+    display:grid;
+    place-items: center;
+    border-radius:50%;
+    cursor: pointer;
+
+
+}
+.pagination .current{
+    background: #333;
+    color: #fff;
+}
+
+
+
+
+/* ------------------small screen for listing page--------------- */
+@media only screen and (max-width: 960px){
+    .containerList{
+        margin-top: 15px;
+    }
+    .leftCol, .rightCol, .housePhoto, .houseInfo{
+        flex-basis: 100%;
+    }
+    
+    .leftCol h1{
+        font-size:22px;
+    }
+    
+    .houseInfo h3{
+        font-size:18px;
+    }
+    .houseInfo i{
+        font-size:16px;
+    }
+    .pagination span{
+    margin:10px 2px;
+    width:30px;
+    height:30px;
+    font-size:10px;
+
+
 }
 
 }
