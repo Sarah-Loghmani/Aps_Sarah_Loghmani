@@ -1,0 +1,55 @@
+//*npm init -y
+// * for gulp(a task runner) installing must type in the terminal=> npm i -g gulp// npm i gulp-sass sass --save-dev
+//* then create gulpfile.js that is a js file contain functions for gulp;
+
+
+// @import 'base';
+//*variables & functions
+@import 'variables';
+
+//*base & layout
+@import 'base';
+// base must be lower than variables 
+
+//*colors
+@import 'colors';
+
+//*components(button, card, navbar)
+@import 'components/card';
+
+//*utilities (margin, padding, opacity)
+
+
+
+// h1{
+//   color:$primary;
+//   margin-bottom: $base-margin;
+// }
+// a{
+//   color:$secondary;
+// }
+// button{
+//   color:white;
+//   border:0;
+//   background-color: $primary;
+//   border-radius: $base-border-radius;
+//   padding:$base-padding;
+// }
+// .error{
+//   color:$error;
+//   border-color:$error;
+//   border-style:solid;
+//   margin:$base-margin;
+//   padding:$base-padding;
+//   border-radius:$base-border-radius;
+//   border-width: $base-border-thickness;
+// }
+// .notification{
+//   color:$secondary;
+//   border-color:$secondary;
+//   border-style: solid;
+//   margin:$base-margin;
+//   padding:$base-padding;
+//   border-radius:$base-border-radius;
+//   border-width: $base-border-thickness;
+// }
